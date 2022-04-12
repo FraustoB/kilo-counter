@@ -13,6 +13,9 @@ export function PlateAdder() {
       <button onClick={() => dispatch(addPlate("yellow"))}>
         Click Me to add yellow Plate
       </button>
+      <button onClick={() => dispatch(addPlate("blue"))}>
+        Click Me to add blue Plate
+      </button>
       <button onClick={() => dispatch(removePlate())}> Remove Plate</button>
     </div>
   );
