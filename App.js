@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Counter } from "./features/counter/counter";
 import { ReadCounter } from "./components/readCounter";
@@ -8,7 +7,9 @@ function App() {
   const name = "jadelyn";
   return (
     <div className="App">
-      Hello World
+      <h1 className="text-3xl font-bold underline">
+        Hello world! From Jadelyn
+      </h1>
       {name}
       <Counter />
       <ReadCounter />
