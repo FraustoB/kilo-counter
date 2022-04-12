@@ -19,6 +19,7 @@ export function PlateAdder() {
       <button onClick={() => dispatch(addPlate("black"))}>
         Click Me to add black Plate
       </button>
+      TAILWIND GANG
       <button onClick={() => dispatch(removePlate())}> Remove Plate</button>
     </div>
   );
