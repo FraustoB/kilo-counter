@@ -9,21 +9,13 @@ export function Counter() {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="flex align-middle">
       <div>
-        <button
-          aria-lavel="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
+        <button onClick={() => dispatch(increment())}>Increment</button>
+
         <span>{count}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
+        <button onClick={() => dispatch(decrement())}>Decrement</button>
+        <br />
       </div>
     </div>
   );

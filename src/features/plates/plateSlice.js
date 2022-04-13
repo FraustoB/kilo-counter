@@ -11,14 +11,17 @@ export const plateSlice = createSlice({
       state.value.push(" " + action.payload);
     },
     removePlate: (state) => {
-      if (state.value.length > 1) {
+      if (state.value.length >= 0) {
         state.value.pop();
       } else {
       }
     },
+    resetPlate: (state) => {
+      state.value = [];
+    },
   },
 });
 
-export const { addPlate, removePlate } = plateSlice.actions;
+export const { addPlate, removePlate, resetPlate } = plateSlice.actions;
 
 export default plateSlice.reducer;

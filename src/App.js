@@ -3,17 +3,13 @@ import { Counter } from "./features/counter/counter";
 import { ReadCounter } from "./components/readCounter";
 import { PlateAdder } from "./features/plates/plateAdder";
 
+import { BaseContainer } from "./components/baseContainer";
+
 function App() {
-  const name = "jadelyn";
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">
-        Hello world! From Jadelyn
-      </h1>
-      {name}
-      <Counter />
-      <ReadCounter />
-      <PlateAdder />
+    <div className="flex items-center flex-col bg-stone-800 text-white">
+      <h1 className="text-3xl font-bold underline">KILO-CALCULATOR</h1>
+      <BaseContainer />
     </div>
   );
 }
