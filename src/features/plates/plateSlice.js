@@ -3,11 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 export const plateSlice = createSlice({
   name: "plateSlice",
   initialState: {
-    value: ["black"],
+    value: [""],
   },
   reducers: {
     addPlate: (state, action) => {
-      console.log("added Plate");
       state.value.push(" " + action.payload);
     },
     removePlate: (state) => {
