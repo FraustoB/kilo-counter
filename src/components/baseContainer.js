@@ -1,5 +1,5 @@
 import React from "react";
-import { Counter } from "../features/counter/counter";
+
 import { PlateAdder } from "../features/plates/plateAdder";
 import { useSelector } from "react-redux";
 
