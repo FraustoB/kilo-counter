@@ -9,7 +9,9 @@ export function BaseContainer() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      This is the base container for my project Current Load is
+      This is the base container for my project
+      <br />
+      Current Load is
       {curPlate}
       <br />
       {curAmount}
