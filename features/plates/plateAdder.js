@@ -12,6 +12,8 @@ export function PlateAdder() {
   // Needed to create a state that tracks the current amount and color of the bar,
   //for takeawayPlate function needs to know what is the latest amount and color,
   // that was added to the bar
+
+  const initState = { amount: [], color: "" };
   const [curPlate, setCurPlate] = useState({
     amount: [],
     color: "",
@@ -46,8 +48,16 @@ export function PlateAdder() {
     }
   };
 
+  //This handles resetting the current plates, current amounts, and current states
+  // so that the bar is now empty
+  const handleReset = (dispatch, initState) => {
+    dispatch(resetPlate());
+    dispatch(resetValue());
+    setCurPlate(initState);
+  };
+
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <div className="flex flex-row text-sm overflow-x-scroll">
         <button
           className="flex-none bg-red-600"
@@ -82,10 +92,15 @@ export function PlateAdder() {
       </div>
 
       <div className="flex flex-row items-center">
-        <button onClick={() => takeawayPlate(dispatch, curPlate.color)}>
+        <button
+          className=""
+          onClick={() => takeawayPlate(dispatch, curPlate.color)}
+        >
           Remove Plate
         </button>
-        <button onClick={() => dispatch(resetPlate())}>Reset Plate</button>
+        <button onClick={() => handleReset(dispatch, initState)}>
+          Reset Bar
+        </button>
       </div>
     </div>
   );
