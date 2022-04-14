@@ -1,7 +1,4 @@
 import "./App.css";
-import { Counter } from "./features/counter/counter";
-import { ReadCounter } from "./components/readCounter";
-import { PlateAdder } from "./features/plates/plateAdder";
 
 import { BaseContainer } from "./components/baseContainer";
 
