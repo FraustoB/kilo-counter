@@ -11,10 +11,10 @@ export function BaseContainer() {
     <div className="flex flex-col justify-center items-center">
       This is the base container for my project
       <br />
-      Current Load is
+      <div>Weight In lbs</div>
       {curPlate}
       <br />
-      {curAmount}
+      {Math.floor(curAmount * 100) / 100}
       <br />
       <PlateAdder />
     </div>
