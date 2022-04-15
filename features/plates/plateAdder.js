@@ -23,7 +23,7 @@ export function PlateAdder() {
   //react-redux
   const updatePlate = (dispatch, color, amount) => {
     //converts Kilos into Lbs, so that weight added to bar in shown in LBS
-    const weightInLbs = amount * 2.2;
+    const weightInLbs = amount * 2.2 * 2;
     //updates component state that tracks which plate
     //color and number that has been added to the bar.
     setCurPlate({
@@ -46,7 +46,7 @@ export function PlateAdder() {
       //takes the last number in the state array that is being tracked
       const num = curPlate.amount.pop();
       //then converts that number in to LBS
-      const weightInLbs = num * 2.2;
+      const weightInLbs = num * 2.2 * 2;
 
       //Batch updates dispatches both to update global state
       batch(() => {
