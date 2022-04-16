@@ -9,10 +9,10 @@ import {
 
 export function PlateAdder() {
   const dispatch = useDispatch();
+
   // Needed to create a state that tracks the current amount and color of the bar,
   //for takeawayPlate function needs to know what is the latest amount and color,
   // that was added to the bar
-
   const initState = { amount: [], color: "" };
   const [curPlate, setCurPlate] = useState({
     amount: [],
@@ -21,6 +21,7 @@ export function PlateAdder() {
 
   //function that updates both the counterReducer and plateReducer using batch from
   //react-redux
+
   const updatePlate = (dispatch, color, amount) => {
     //converts Kilos into Lbs, so that weight added to bar in shown in LBS
     const weightInLbs = amount * 2.2 * 2;
@@ -34,7 +35,9 @@ export function PlateAdder() {
     //redux state. Adding both the plate color to the bar and the amount of weight that is being added ot the bar
 
     batch(() => {
-      dispatch(addPlate(color));
+      //dispatch to the plateSlice main store will be an object that will be used in other parts of our application,
+      //dispatch to the counterSlice will only update the current weight of our bar. Will refactor
+      dispatch(addPlate({ plate: color, weight: amount }));
       dispatch(incrementByAmount(weightInLbs));
     });
   };
@@ -69,32 +72,32 @@ export function PlateAdder() {
       <div className="flex flex-row text-sm overflow-x-scroll">
         <button
           className="flex-none bg-red-600"
-          onClick={() => updatePlate(dispatch, "red", 25)}
+          onClick={() => updatePlate(dispatch, "bg-red-600", 25)}
         >
           25KGs
         </button>
         <button
           className="flex-none bg-blue-600 text-white"
-          onClick={() => updatePlate(dispatch, "blue", 20)}
+          onClick={() => updatePlate(dispatch, "bg-blue-600", 20)}
         >
           20Kgs
         </button>
         <button
           className="flex-none bg-yellow-400"
-          onClick={() => updatePlate(dispatch, "yellow", 15)}
+          onClick={() => updatePlate(dispatch, "bg-yellow-400", 15)}
         >
           15KGs
         </button>
         <button
           className="flex-none bg-green-600 text-white"
-          onClick={() => updatePlate(dispatch, "green", 10)}
+          onClick={() => updatePlate(dispatch, "bg-green-600", 10)}
         >
           10Kgs
         </button>
 
         <button
           className="flex-none bg-stone-100 text-white"
-          onClick={() => updatePlate(dispatch, "white", 5)}
+          onClick={() => updatePlate(dispatch, "bg-stone-100", 5)}
         >
           5kgs
         </button>
