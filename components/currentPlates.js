@@ -1,17 +1,18 @@
 import React from "react";
-
 import { useSelector } from "react-redux";
+import { v4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
 export function CurrentPlates() {
   const arrayOfPlates = useSelector((state) => state.plates.value);
 
-  console.log(`the array of plates is ${arrayOfPlates.plate}`);
   const currentPlates = arrayOfPlates.map((thisPlate) => {
     if (thisPlate.plate != "") {
       return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center" key={v4()}>
           {thisPlate.weight}
           <div
+            // id={v4()}
             className={`${thisPlate.plate}  h-full outline outline-black outline-1 w-5 `}
           ></div>
         </div>
@@ -26,7 +27,6 @@ export function CurrentPlates() {
 
   return (
     <div>
-      This is the Current Plates
       <div className="flex flex-row h-20">{currentPlates}</div>
     </div>
   );

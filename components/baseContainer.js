@@ -5,12 +5,11 @@ import { useSelector } from "react-redux";
 import { CurrentPlates } from "./currentPlates";
 
 export function BaseContainer() {
-  const curPlate = useSelector((state) => state.plates.value.plate);
+  // const curPlate = useSelector((state) => state.plates.value.plate);
   const curAmount = useSelector((state) => state.counter.value);
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      This is the base container for my project
+    <div className="flex flex-col justify-center items-center w-auto">
       <br />
       <div>Weight In lbs</div>
       <CurrentPlates />
