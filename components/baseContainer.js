@@ -2,9 +2,10 @@ import React from "react";
 
 import { PlateAdder } from "../features/plates/plateAdder";
 import { useSelector } from "react-redux";
+import { CurrentPlates } from "./currentPlates";
 
 export function BaseContainer() {
-  const curPlate = useSelector((state) => state.plates.value);
+  const curPlate = useSelector((state) => state.plates.value.plate);
   const curAmount = useSelector((state) => state.counter.value);
 
   return (
@@ -12,7 +13,7 @@ export function BaseContainer() {
       This is the base container for my project
       <br />
       <div>Weight In lbs</div>
-      {curPlate}
+      <CurrentPlates />
       <br />
       {Math.floor(curAmount * 100) / 100}
       <br />
