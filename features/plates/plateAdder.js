@@ -5,6 +5,9 @@ import {
   incrementByAmount,
   resetValue,
   decrementByAmount,
+  incrementKiloByAmount,
+  resetKiloValue,
+  decrementKiloByAmount,
 } from "../counter/counterSlice";
 
 export function PlateAdder() {
@@ -41,6 +44,7 @@ export function PlateAdder() {
       //dispatch to the counterSlice will only update the current weight of our bar. Will refactor
       dispatch(addPlate({ plate: color, weight: amount, size: size }));
       dispatch(incrementByAmount(weightInLbs));
+      dispatch(incrementKiloByAmount(amount * 2));
     });
   };
 
@@ -57,6 +61,7 @@ export function PlateAdder() {
       batch(() => {
         dispatch(removePlate());
         dispatch(decrementByAmount(weightInLbs));
+        dispatch(decrementKiloByAmount(num * 2));
       });
     }
   };
@@ -66,6 +71,7 @@ export function PlateAdder() {
   const handleReset = (dispatch, initState) => {
     dispatch(resetPlate());
     dispatch(resetValue());
+    dispatch(resetKiloValue());
     setCurPlate(initState);
   };
 
@@ -76,29 +82,29 @@ export function PlateAdder() {
           className={`flex-none bg-red-600  rounded-full h-28 w-28`}
           onClick={() => updatePlate(dispatch, "bg-red-600", 25, "28")}
         >
-          25KGs
+          25kgs
         </button>
         <button
           className={`flex-none bg-blue-600 text-white rounded-full h-28 w-28`}
           onClick={() => updatePlate(dispatch, "bg-blue-600", 20, "28")}
         >
-          20Kgs
+          20kgs
         </button>
         <button
           className={`flex-none bg-yellow-400 rounded-full h-24 w-24`}
           onClick={() => updatePlate(dispatch, "bg-yellow-400", 15, "24")}
         >
-          15KG
+          15kgs
         </button>
         <button
           className={`flex-none bg-green-600 text-white rounded-full h-20 w-20`}
           onClick={() => updatePlate(dispatch, "bg-green-600", 10, "20")}
         >
-          10Kgs
+          10kgs
         </button>
 
         <button
-          className={`flex-none bg-stone-100 text-white rounded-full h-16 w-16`}
+          className={`flex-none bg-stone-100 text-slate-900 rounded-full h-16 w-16`}
           onClick={() => updatePlate(dispatch, "bg-stone-100", 5, "16")}
         >
           5kgs

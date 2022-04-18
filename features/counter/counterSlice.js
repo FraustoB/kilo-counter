@@ -4,6 +4,7 @@ export const counterSlice = createSlice({
   name: "counter",
   initialState: {
     value: 44.09,
+    kiloValue: 20,
   },
   reducers: {
     incrementByAmount: (state, action) => {
@@ -15,10 +16,26 @@ export const counterSlice = createSlice({
     resetValue: (state) => {
       state.value = 44.09;
     },
+
+    incrementKiloByAmount: (state, action) => {
+      state.kiloValue += action.payload;
+    },
+    decrementKiloByAmount: (state, action) => {
+      state.kiloValue -= action.payload;
+    },
+    resetKiloValue: (state) => {
+      state.kiloValue = 20;
+    },
   },
 });
 
-export const { incrementByAmount, decrementByAmount, resetValue } =
-  counterSlice.actions;
+export const {
+  incrementByAmount,
+  decrementByAmount,
+  resetValue,
+  incrementKiloByAmount,
+  resetKiloValue,
+  decrementKiloByAmount,
+} = counterSlice.actions;
 
 export default counterSlice.reducer;

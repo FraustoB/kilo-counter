@@ -10,7 +10,7 @@ export function CurrentPlates() {
     if (thisPlate.plate != "") {
       return (
         <div className="flex flex-col items-center" key={v4()}>
-          {thisPlate.weight}
+          <span className="text-lg">{thisPlate.weight}</span>
           <div
             // id={v4()}
             className={`${thisPlate.plate}  h-${thisPlate.size} outline outline-black outline-1 w-5 mx-1 rounded  `}
@@ -27,7 +27,9 @@ export function CurrentPlates() {
 
   return (
     <div>
-      <div className="flex flex-row h-32 items-center">{currentPlates}</div>
+      <div className="flex flex-row h-32 items-center my-7 ">
+        {currentPlates}
+      </div>
     </div>
   );
 }
