@@ -77,7 +77,11 @@ export function PlateAdder() {
 
   return (
     <div className="flex flex-col lg:w-3/4 w-screen ">
-      <div className="flex flex-row text-md overflow-x-auto items-center">
+      <div
+        className="flex flex-row 
+      text-md overflow-x-auto items-center outline 
+      outline-2 outline-neutral-800 scrollbar-thin scrollbar-thumb-gray-900 "
+      >
         <button
           className={`flex-none bg-red-600  rounded-full h-28 w-28`}
           onClick={() => updatePlate(dispatch, "bg-red-600", 25, "28")}
