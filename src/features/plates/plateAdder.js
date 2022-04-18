@@ -68,8 +68,8 @@ export function PlateAdder() {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex flex-row text-sm overflow-x-scroll">
+    <div className="flex flex-col lg:w-3/4 w-screen ">
+      <div className="flex flex-row text-md overflow-x-auto">
         <button
           className="flex-none bg-red-600"
           onClick={() => updatePlate(dispatch, "bg-red-600", 25)}
@@ -101,16 +101,32 @@ export function PlateAdder() {
         >
           5kgs
         </button>
+        <button
+          className="flex-none bg-zinc-700 text-white"
+          onClick={() => updatePlate(dispatch, "bg-zinc-700", 2.5)}
+        >
+          2.5kgs
+        </button>
+        <button
+          className="flex-none bg-slate-400 text-white"
+          onClick={() => updatePlate(dispatch, "bg-slate-400", 5)}
+        >
+          1.25kgs
+        </button>
       </div>
 
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row justify-center">
         <button
-          className=""
+          className="bg-gray-400"
           onClick={() => takeawayPlate(dispatch, curPlate.color)}
         >
           Remove Plate
         </button>
-        <button onClick={() => handleReset(dispatch, initState)}>
+
+        <button
+          className="bg-gray-400"
+          onClick={() => handleReset(dispatch, initState)}
+        >
           Reset Bar
         </button>
       </div>
