@@ -27,7 +27,7 @@ export function CurrentPlates() {
 
   return (
     <div>
-      <div className="flex flex-row h-20">{currentPlates}</div>
+      <div className="flex flex-row h-32">{currentPlates}</div>
     </div>
   );
 }
