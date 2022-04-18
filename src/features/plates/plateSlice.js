@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initStoreValue = { plate: "", weight: 0 };
+const initStoreValue = { plate: "", weight: 0, size: "" };
 export const plateSlice = createSlice({
   name: "plateSlice",
   initialState: {
