@@ -80,7 +80,7 @@ export function PlateAdder() {
       <div
         className="flex flex-row 
       text-md overflow-x-auto items-center outline 
-      outline-2 outline-neutral-800 scrollbar-thin scrollbar-thumb-gray-900 "
+      outline-2 outline-neutral-800 scrollbar-thin scrollbar-thumb-gray-900 mb-5 "
       >
         <button
           className={`flex-none bg-red-600  rounded-full h-28 w-28`}
@@ -127,7 +127,7 @@ export function PlateAdder() {
         </button>
       </div>
 
-      <div className={`flex flex-row justify-center`}>
+      <div className={`flex flex-row justify-center text-xl`}>
         <button
           className="bg-gray-400"
           onClick={() => takeawayPlate(dispatch, curPlate.color)}
