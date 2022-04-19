@@ -10,7 +10,7 @@ export function BaseContainer() {
   const curKiloAmount = useSelector((state) => state.counter.kiloValue);
 
   return (
-    <div className=" w-auto lg:w-3/4">
+    <div className=" w-auto lg:w-3/4 lg:h-10/12">
       <div className="flex flex-col justify-center items-center ">
         <span className="font-semibold my-5 text-2xl underline decoration-solid">
           Current Weight

@@ -7,7 +7,7 @@ function App() {
       <h1 className="md:text-6xl text-4xl font-bold underline mt-4 mb-10 italic ">
         KILO-CALCULATOR
       </h1>
-      <div className="flex flex-col items-center bg-stone-600 rounded-lg h-4/6 ">
+      <div className="flex flex-col items-center bg-stone-600 rounded-lg h-4/6 md:h-full ">
         <BaseContainer />
       </div>
       <p className="mt-5 text-lg">coded by Brandon Shin Frausto</p>
