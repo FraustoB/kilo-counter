@@ -12,9 +12,9 @@ export function BaseContainer() {
   return (
     <div className=" w-auto lg:w-3/4">
       <div className="flex flex-col justify-center items-center ">
-        <span className="font-semibold mt-5 text-xl">Current Weight</span>
-        <span className="text-lg font-medium">{curKiloAmount} kg</span>
-        <span className="text-lg font-medium">
+        <span className="font-semibold mt-5 text-2xl">Current Weight</span>
+        <span className="text-xl font-medium">{curKiloAmount} kg</span>
+        <span className="text-xl font-medium">
           {Math.floor(curAmount * 100) / 100} lbs
         </span>
         <CurrentPlates />
