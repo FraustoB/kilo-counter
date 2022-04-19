@@ -83,60 +83,60 @@ export function PlateAdder() {
       scrollbar-thumb-gray-900 mb-5 "
       >
         <button
-          className={`flex-none bg-red-600  rounded-full h-28 w-28`}
+          className={`flex-none bg-red-600  rounded-full h-28 w-28 md:hover:scale-105`}
           onClick={() => updatePlate(dispatch, "bg-red-600", 25, "28")}
         >
           25kgs
         </button>
         <button
-          className={`flex-none bg-blue-600 text-white rounded-full h-28 w-28`}
+          className={`flex-none bg-blue-600 text-white rounded-full h-28 w-28 md:hover:scale-105`}
           onClick={() => updatePlate(dispatch, "bg-blue-600", 20, "28")}
         >
           20kgs
         </button>
         <button
-          className={`flex-none bg-yellow-400 rounded-full h-24 w-24`}
+          className={`flex-none bg-yellow-400 rounded-full h-24 w-24 md:hover:scale-105`}
           onClick={() => updatePlate(dispatch, "bg-yellow-400", 15, "24")}
         >
           15kgs
         </button>
         <button
-          className={`flex-none bg-green-600 text-white rounded-full h-20 w-20`}
+          className={`flex-none bg-green-600 text-white rounded-full h-20 w-20 md:hover:scale-105`}
           onClick={() => updatePlate(dispatch, "bg-green-600", 10, "20")}
         >
           10kgs
         </button>
 
         <button
-          className={`flex-none bg-stone-100 text-slate-900 rounded-full h-16 w-16`}
+          className={`flex-none bg-stone-100 text-slate-900 rounded-full h-16 w-16 md:hover:scale-105`}
           onClick={() => updatePlate(dispatch, "bg-stone-100", 5, "16")}
         >
           5kgs
         </button>
         <button
-          className={`flex-none bg-zinc-700 text-white rounded-full h-14 w-14`}
+          className={`flex-none bg-zinc-700 text-white rounded-full h-14 w-14 md:hover:scale-105`}
           onClick={() => updatePlate(dispatch, "bg-zinc-700", 2.5, "14")}
         >
           2.5
         </button>
         <button
-          className={`flex-none bg-slate-400 text-white rounded-full h-10 w-10`}
+          className={`flex-none bg-slate-400 text-white rounded-full h-10 w-10 md:hover:scale-105`}
           onClick={() => updatePlate(dispatch, "bg-slate-400", 5, "10")}
         >
           1.25
         </button>
       </div>
 
-      <div className={`flex flex-row justify-center text-xl`}>
+      <div className={`flex flex-row justify-center text-xl `}>
         <button
-          className="bg-gray-400"
+          className="bg-gray-400 md:hover:scale-105"
           onClick={() => takeawayPlate(dispatch, curPlate.color)}
         >
           Remove Plate
         </button>
 
         <button
-          className="bg-gray-400"
+          className="bg-gray-400 md:hover:scale-105"
           onClick={() => handleReset(dispatch, initState)}
         >
           Reset Bar
