@@ -129,17 +129,16 @@ export function PlateAdder() {
 
       <div className={`flex flex-row justify-center text-xl `}>
         <button
-          className="bg-gray-400 md:hover:scale-105"
-          onClick={() => takeawayPlate(dispatch, curPlate.color)}
-        >
-          Remove Plate
-        </button>
-
-        <button
-          className="bg-gray-400 md:hover:scale-105"
+          className="bg-red-600 md:hover:scale-105"
           onClick={() => handleReset(dispatch, initState)}
         >
           Reset Bar
+        </button>
+        <button
+          className="bg-green-800 md:hover:scale-105"
+          onClick={() => takeawayPlate(dispatch, curPlate.color)}
+        >
+          Remove Plate
         </button>
       </div>
     </div>
