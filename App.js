@@ -10,6 +10,10 @@ function App() {
       <div className="flex flex-col items-center bg-stone-600 rounded-lg h-4/6 ">
         <BaseContainer />
       </div>
+      <p className="mt-5 text-lg">coded by Brandon Shin Frausto</p>
+      <a href="https://frausto.dev/" className="text-indigo-300 text-xl">
+        frausto.dev
+      </a>
     </div>
   );
 }
