@@ -76,11 +76,11 @@ export function PlateAdder() {
   };
 
   return (
-    <div className="flex flex-col lg:w-3/4 w-screen ">
+    <div className="flex flex-col md:w-fit w-screen">
       <div
         className="flex flex-row 
-      text-md overflow-x-auto items-center outline 
-      outline-2 outline-neutral-800 scrollbar-thin scrollbar-thumb-gray-900 mb-5 "
+        text-md overflow-x-auto items-center scrollbar-thin
+      scrollbar-thumb-gray-900 mb-5 "
       >
         <button
           className={`flex-none bg-red-600  rounded-full h-28 w-28`}
