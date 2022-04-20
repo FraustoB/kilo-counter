@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kilo-counter/static/css/main.923dcfa5.css",
+    "main.js": "/kilo-counter/static/js/main.74679df4.js",
+    "static/js/787.c6e21bd1.chunk.js": "/kilo-counter/static/js/787.c6e21bd1.chunk.js",
+    "index.html": "/kilo-counter/index.html",
+    "main.923dcfa5.css.map": "/kilo-counter/static/css/main.923dcfa5.css.map",
+    "main.74679df4.js.map": "/kilo-counter/static/js/main.74679df4.js.map",
+    "787.c6e21bd1.chunk.js.map": "/kilo-counter/static/js/787.c6e21bd1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.923dcfa5.css",
+    "static/js/main.74679df4.js"
+  ]
+}
